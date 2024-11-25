@@ -1,0 +1,14 @@
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./imagenes/cine.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.container{
+    width: 100%;
+    position: relative;
+    top: 20%;
+}
