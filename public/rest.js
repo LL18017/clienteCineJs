@@ -13,7 +13,9 @@ async function findRange(URL,first, max,all) {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
-        }});
+        },
+        mode: 'cors' 
+      });
       
       if (!respuesta.ok) {
         throw new Error('Error en la solicitud');

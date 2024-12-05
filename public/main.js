@@ -173,7 +173,7 @@ btnEliminar.addEventListener("click",async (e)=>{
 })
 
 // Crear una nueva conexión WebSocket con el servidor
-const socket = new WebSocket('ws://localhost:9080/cine-1.0-SNAPSHOT/notificadorws'); // Reemplaza la URL si es necesario
+const socket = new WebSocket('ws://localhost:9080/cine-1.0-SNAPSHOT/notificadortipoproducto'); // Reemplaza la URL si es necesario
 
 // Evento que se ejecuta cuando la conexión WebSocket se establece
 socket.onopen = function(event) {
