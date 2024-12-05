@@ -12,3 +12,35 @@ body{
     position: relative;
     top: 20%;
 }
+    /* Estilos para el dropdown */
+    .custom-select {
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: inline-block;
+      width: 200px;
+    }
+    .dropdown-menu {
+      display: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      z-index: 1000;
+    }
+    .dropdown-menu li {
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+    .dropdown-menu li:hover {
+      background-color: #f1f1f1;
+    }
+
+    .asientosDisponiblesList:hover{
+      background-color: aqua;
+    }

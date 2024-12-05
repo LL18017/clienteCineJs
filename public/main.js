@@ -182,7 +182,9 @@ socket.onopen = function(event) {
 
 // Evento que se ejecuta cuando se recibe un mensaje del servidor WebSocket
 socket.onmessage = function(event) {
- 
+    console.log("cambios");
+      console.log(event.data);
+      
     if (event.data==="nuevo dato guardado") {
         if (!tableContainer.classList.contains("d-none")) {
 
@@ -213,6 +215,8 @@ socket.onerror = function(event) {
 };
 
 // Evento que se ejecuta cuando la conexión WebSocket se cierra
+
+/*
 socket.onclose = function(event) {
     console.log('Conexión WebSocket cerrada');
-};
+};*/

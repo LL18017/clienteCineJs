@@ -1,10 +1,12 @@
 let registros=0;
 
-async function findRange(URL,first, max) {
+async function findRange(URL,first, max,all) {
     if (first!=null && max!=null && first>=0 && max>first) {
           URL=`${URL}?first=${first}&max=${max}`
           console.log(URL);
           
+    }else if (all) {
+      URL=`${URL}?all=${all}`
     }
     try {
       const respuesta = await fetch(URL,{
