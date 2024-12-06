@@ -14,7 +14,7 @@
     <div class="container" >
          <div id="formContainer" class="">
 
-            <form class="row container-fluid">
+            <form id="formReserva" class="row container-fluid">
                 
                 <div class="col align-items-center my-2" id="progracionUsuario">
                     <h3 class="text-white text-center mb-4">Cartelera</h3>
@@ -32,6 +32,7 @@
                         </div>
                         <div class="col">
                             <select id="SalaSOM" class="form-select" aria-label="Default select example">
+                                <option selected>no hay salas</option>
                               </select>
                         </div>
                     </div>
@@ -51,30 +52,20 @@
                     <h3 class="text-white text-center mb-4">Asientos a selecionar</h3>
                     <div class="d-flex justify-content-center">
                         <div class="custom-select bg-white p-2 m-2">
-                            <p id="selected-option text-center">Asientos disponibles</span>
-                            <ul class="list-group mt-4 asientosDisponiblesList">
-                              <li class="list-group-item active" aria-current="true">An active item</li>
-                              <li class="list-group-item">A second item</li>
-                              <li class="list-group-item">A third item</li>
-                              <li class="list-group-item">A fourth item</li>
-                              <li class="list-group-item">And a fifth one</li>
+                            <p id="selected-option text-center">Asientos disponibles</p>
+                            <ul id="ulAsientosDisponibles" class="list-group mt-4 asientosDisponiblesList">
                             </ul>
                         </div>
                         <div class="custom-select bg-white p-2 m-2">
-                            <span id="selected-option text-center">Asientos selecionados</span>
-                            <ul class="list-group mt-4">
-                              <li class="list-group-item" aria-current="true">An active item</li>
-                              <li class="list-group-item">A second item</li>
-                              <li class="list-group-item">A third item</li>
-                              <li class="list-group-item">A fourth item</li>
-                              <li class="list-group-item">And a fifth one</li>
+                            <p id="selected-option text-center">Asientos selecionados</p>
+                            <ul id="ulAsientosSelecionados" class="list-group mt-4">
                             </ul>
                         </div>  
                     </div>
                     
                     <div class="btn-container d-flex justify-content-center my-4">
-                        <button class="btn btn-secondary me-4" id="btnAgregarAsiento">AGREGAR</button>
-                        <button class="btn btn-secondary me-4" id="btnEliminarAsiento">ELIMINAR</button>
+                        <button type="button" class="btn btn-secondary me-4" id="btnAgregarAsiento" disabled>AGREGAR</button>
+                        <button type="button" class="btn btn-secondary me-4" id="btnEliminarAsiento" disabled>ELIMINAR</button>
                     </div>
 
                 </div>
@@ -85,7 +76,7 @@
                         <label class="text-white form-label" for="inputDatosnombre">Nombre:</label>
                     </div>
                     <div class="col">
-                        <input id="inputDatosnombre" name="nombre" class="form-control w-50" type="text" required>
+                        <input id="inputDatosnombre" name="nombre" class="form-control w-50" type="text" required value="Mario">
                     </div>
                 </div>
                 <div class="row align-items-center my-2">
@@ -93,11 +84,11 @@
                         <label class="text-white form-label" for="inputDui">dui:</label>
                     </div>
                     <div class="col">
-                        <input id="inputDui" name="dui" class="form-control w-50" type="text" required>
+                        <input id="inputDui" name="dui" class="form-control w-50" type="number" required value="0583">
                     </div>
                 </div>
                 <br>
-                <button class="btn btn-primary">Crear Reserva</button>
+                <button type="button" id="btnCrearReserva" class="btn btn-primary" disabled>Crear Reserva</button>
               </div>
             </form>
          </div>
